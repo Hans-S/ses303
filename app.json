@@ -425,7 +425,8 @@
             "name": {
               "en": "MultiChannel device 4"
             }
-          },
+          }
+	},
 			"settings": [
 				{
 					"id": "Temp_Delta",
