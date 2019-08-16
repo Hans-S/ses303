@@ -379,7 +379,6 @@
 					}
 				},
 				"associationGroups": [1,2,3,4,5,6]
-				// "associationGroupsMultiChannel": [ 2 ] // HSC: will appear as 1.1 in group 2
 
 			},
 			"images": {
