@@ -343,7 +343,9 @@
 			"capabilities": [
 				"measure_humidity",
 				"measure_temperature",
-				"measure_battery"
+				"measure_battery",
+				"measure_temperature.002",
+				"measure_temperature.003"
 			],
 			"mobile": {
         "components": [
@@ -364,7 +366,20 @@
               "measure_humidity"
             ],
             "id": "sensor"
-          }
+          },
+	  {
+            "capabilities": [
+              "measure_temperature.002"
+            ],
+            "id": "sensor"
+          },
+          {
+            "capabilities": [
+              "measure_temperature.003"
+            ],
+            "id": "sensor"
+          },
+
         ]
 			},
 			"zwave": {
@@ -399,7 +414,7 @@
           "2": {
 						"class": "sensor",
             "capabilities": [
-              "measure_temperature"
+              "measure_temperature.002"
             ],
             "icon": "/drivers/SES303/assets/icon.svg",
             "name": {
@@ -409,7 +424,7 @@
           "3": {
 						"class": "sensor",
             "capabilities": [
-              "measure_temperature"
+              "measure_temperature.003"
             ],
             "icon": "/drivers/SES303/assets/icon.svg",
             "name": {
