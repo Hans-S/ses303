@@ -37,7 +37,47 @@ module.exports = new ZwaveDriver(path.basename(__dirname), {
 
 				return report['Sensor Value (Parsed)'];
 			}
-		},		
+		},
+		measure_temperature.002: {
+			getOnWakeUp: true,
+			command_class			: 'COMMAND_CLASS_SENSOR_MULTILEVEL',
+			command_get				: 'SENSOR_MULTILEVEL_GET',
+			command_get_parser		: function(){
+				return {
+					'Sensor Type': 'Temperature (version 1)',
+					'Properties1': {
+						'Scale': 0
+					}
+				}
+			},
+			command_report			: 'SENSOR_MULTILEVEL_REPORT',
+			command_report_parser		: function( report ){
+				if( report['Sensor Type'] !== 'Temperature (version 1)' )
+					return null;
+
+				return report['Sensor Value (Parsed)'];
+			}
+		},
+		measure_temperature.003: {
+			getOnWakeUp: true,
+			command_class			: 'COMMAND_CLASS_SENSOR_MULTILEVEL',
+			command_get				: 'SENSOR_MULTILEVEL_GET',
+			command_get_parser		: function(){
+				return {
+					'Sensor Type': 'Temperature (version 1)',
+					'Properties1': {
+						'Scale': 0
+					}
+				}
+			},
+			command_report			: 'SENSOR_MULTILEVEL_REPORT',
+			command_report_parser		: function( report ){
+				if( report['Sensor Type'] !== 'Temperature (version 1)' )
+					return null;
+
+				return report['Sensor Value (Parsed)'];
+			}
+		},
 		measure_humidity: {
 			getOnWakeUp: true,
 			command_class			: 'COMMAND_CLASS_SENSOR_MULTILEVEL',
